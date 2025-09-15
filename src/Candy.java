@@ -1,9 +1,15 @@
+@SuppressWarnings("unused")
 public class Candy extends SweetBase {
-    private String flavor;
+    private final String flavor;
 
     public Candy(String name, double weight, double sugarContent, double price, String flavor) {
         super(name, weight, sugarContent, price);
         this.flavor = flavor;
+    }
+
+    @Override
+    public String getDescription() {
+        return "Candy with flavor: " + flavor;
     }
 
     @Override
