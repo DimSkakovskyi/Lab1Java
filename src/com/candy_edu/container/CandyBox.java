@@ -11,16 +11,16 @@ public class CandyBox {
     private final CandySystem system = new CandySystem();
 
     public CandyBox() {
-        candies.add(new Candy("Roshen Black Chocolate", 100, 35.5, CandyType.CHOCOLATE));
-        candies.add(new Candy("Korivka", 50, 12.0, CandyType.IRIS));
-        candies.add(new Candy("Barbaris", 40, 10.0, CandyType.CARAMEL));
-        candies.add(new Candy("Jelly Bears", 80, 25.0, CandyType.JELLY));
-        candies.add(new Candy("Zefir Kyivsky", 120, 40.0, CandyType.MARSHMALLOW));
+        candies.add(new Candy("Roshen Black Chocolate", 100, 35.5, 60, CandyType.CHOCOLATE));
+        candies.add(new Candy("Korivka", 50, 12.0, 30, CandyType.IRIS));
+        candies.add(new Candy("Barbaris", 40, 10.0, 25, CandyType.CARAMEL));
+        candies.add(new Candy("Jelly Bears", 80, 25.0, 70, CandyType.JELLY));
+        candies.add(new Candy("Zefir Kyivsky", 120, 40.0, 50, CandyType.MARSHMALLOW));
 
         system.getCandies(candies);
         system.getTotalWeightAndPrice(candies);
         system.sortingByType(candies, CandyType.CHOCOLATE);
-        system.findByWeightRange(50, 100, candies);
+        system.findBySugarRange(30, 60, candies);
     }
 }
 

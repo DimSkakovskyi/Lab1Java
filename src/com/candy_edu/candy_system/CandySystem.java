@@ -34,18 +34,19 @@ public class CandySystem {
         System.out.println();
     }
 
-    public void findByWeightRange(Integer minGrams, Integer maxGrams, List<Candy> candies){
-        System.out.println("Find by Weight Range method.");
+    public void findBySugarRange(Integer minSugar, Integer maxSugar, List<Candy> candies){
+        System.out.println("Find by Sugar Range method.");
         boolean isEmpty = true;
         for(Candy candy : candies){
-            int w = candy.getWeight().getGrams();
-            if(w >= minGrams && w <= maxGrams){
+            int s = candy.getSugar();
+            if(s >= minSugar && s <= maxSugar){
                 System.out.println(candy);
                 isEmpty = false;
             }
         }
         if(isEmpty)
-            System.out.println("No candies found with weight between " + minGrams + "g and " + maxGrams + "g.");
+            System.out.println("No candies found with sugar between "
+                    + minSugar + "g and " + maxSugar + "g.");
     }
 }
 
