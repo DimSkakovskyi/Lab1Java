@@ -1,6 +1,5 @@
 package com.candy_edu.candy;
 
-@SuppressWarnings("unused")
 public class CandyWeight {
     private Integer grams;
 

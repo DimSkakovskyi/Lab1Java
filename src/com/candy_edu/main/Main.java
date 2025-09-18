@@ -1,7 +1,10 @@
 package com.candy_edu.main;
 
-public class Main {
-    public static void main(String[] args) {
+import com.candy_edu.container.CandyBox;
 
+public class Main {
+    public static void main(String[] args){
+        CandyBox box = new CandyBox();
     }
 }
+

@@ -18,7 +18,6 @@ public class Candy {
     public CandyWeight getWeight(){ return weight; }
     public Double getPrice(){ return price; }
     public CandyType getType(){ return type; }
-
     public void setName(String name){ this.name = name; }
     public void setWeight(Integer grams){ weight.setGrams(grams); }
     public void setPrice(Double price){ this.price = price; }
