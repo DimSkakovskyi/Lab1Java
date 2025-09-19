@@ -1,7 +1,9 @@
 package com.candy_edu.container;
 
-import com.candy_edu.candy.*;
+import com.candy_edu.candy.Candy;
+import com.candy_edu.candy.CandyType;
 import com.candy_edu.candy_system.CandySystem;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,9 +20,14 @@ public class CandyBox {
         candies.add(new Candy("Zefir Kyivsky", 120, 40.0, 50, CandyType.MARSHMALLOW));
 
         system.getCandies(candies);
-        system.getTotalWeightAndPrice(candies);
+        system.getTotalWeight(candies);
+        system.getTotalPrice(candies);
         system.sortingByType(candies, CandyType.CHOCOLATE);
-        system.findBySugarRange(30, 60, candies);
+        system.findBySugarRange(candies, 30, 60);
+    }
+
+    public List<Candy> getCandies() {
+        return candies;
     }
 }
 

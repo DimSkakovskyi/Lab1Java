@@ -1,7 +1,8 @@
 package com.candy_edu.candy_system;
 
-import com.candy_edu.candy.*;
-
+import com.candy_edu.candy.Candy;
+import com.candy_edu.candy.CandyType;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CandySystem {
@@ -11,15 +12,22 @@ public class CandySystem {
         System.out.println();
     }
 
-    public void getTotalWeightAndPrice(List<Candy> candies){
-        Integer totalWeight = 0;
-        Double totalPrice = 0.0;
-        for(Candy candy : candies){
+    public int getTotalWeight(List<Candy> candies) {
+        int totalWeight = 0;
+        for (Candy candy : candies) {
             totalWeight += candy.getWeight().getGrams();
+        }
+        return totalWeight;
+    }
+
+    public double getTotalPrice(List<Candy> candies) {
+        double totalPrice = 0.0;
+        for (Candy candy : candies) {
             totalPrice += candy.getPrice();
         }
-        System.out.println("Total weight: " + totalWeight + "g, Total price: " + totalPrice + " UAH\n");
+        return totalPrice;
     }
+
 
     public void sortingByType(List<Candy> candies, CandyType type){
         System.out.println("\nSorting by Type method.");
@@ -34,19 +42,14 @@ public class CandySystem {
         System.out.println();
     }
 
-    public void findBySugarRange(Integer minSugar, Integer maxSugar, List<Candy> candies){
-        System.out.println("Find by Sugar Range method.");
-        boolean isEmpty = true;
-        for(Candy candy : candies){
-            int s = candy.getSugar();
-            if(s >= minSugar && s <= maxSugar){
-                System.out.println(candy);
-                isEmpty = false;
+    public List<Candy> findBySugarRange(List<Candy> candies, int minSugar, int maxSugar) {
+        List<Candy> result = new ArrayList<>();
+        for (Candy candy : candies) {
+            if (candy.getSugar() >= minSugar && candy.getSugar() <= maxSugar) {
+                result.add(candy);
             }
         }
-        if(isEmpty)
-            System.out.println("No candies found with sugar between "
-                    + minSugar + "g and " + maxSugar + "g.");
+        return result;
     }
 }
 
