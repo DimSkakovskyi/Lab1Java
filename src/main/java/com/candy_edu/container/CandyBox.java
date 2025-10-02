@@ -20,8 +20,7 @@ public class CandyBox {
         candies.add(new Candy("Zefir Kyivsky", 120, 40.0, 50, CandyType.MARSHMALLOW));
 
         system.getCandies(candies);
-        system.getTotalWeight(candies);
-        system.getTotalPrice(candies);
+        system.getTotalWeightAndPrice(candies);
         system.sortingByType(candies, CandyType.CHOCOLATE);
         system.findBySugarRange(candies, 30, 60);
     }

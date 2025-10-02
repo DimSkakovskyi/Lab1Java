@@ -12,20 +12,14 @@ public class CandySystem {
         System.out.println();
     }
 
-    public int getTotalWeight(List<Candy> candies) {
-        int totalWeight = 0;
-        for (Candy candy : candies) {
+    public void getTotalWeightAndPrice(List<Candy> candies){
+        Integer totalWeight = 0;
+        Double totalPrice = 0.0;
+        for(Candy candy : candies){
             totalWeight += candy.getWeight().getGrams();
-        }
-        return totalWeight;
-    }
-
-    public double getTotalPrice(List<Candy> candies) {
-        double totalPrice = 0.0;
-        for (Candy candy : candies) {
             totalPrice += candy.getPrice();
         }
-        return totalPrice;
+        System.out.println("Total weight: " + totalWeight + "g, Total price: " + totalPrice + " UAH\n");
     }
 
 
